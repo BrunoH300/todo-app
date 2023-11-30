@@ -13,7 +13,7 @@ app.use(express.urlencoded({
 app.use(express.json())
 
 
-app.post("/criar", (requisicao,resposta)=>{
+app.post("/criar", (requisicao, resposta) =>{
     const descricao= requisicao.body.descricao 
     const completa = 0
 
@@ -27,14 +27,32 @@ app.post("/criar", (requisicao,resposta)=>{
             return console.log(erro)
         }
 
-        resquisicao.redirect('/')
+        resposta.redirect('/')
     })
 })
 
+app.get('/', (requisicao,resposta)=> {
+    const sql = 'SELECT * FROM tarefas'
+     conexao.query(sql, (erro,dados) => {
+        if(erro){
+            return console.log(erro)
+        }
 
-app.get('/', (requisicao, resposta) =>{
+        console.log(dados)
+
+         console.tarefas = dados.map((dado) =>{
+            return{
+                id: dados.id,
+                descricao: dados.descricao,
+                completa: dado.completa === 0 ? false :true
+            }
+         })
+    })
+
+
     resposta.render('home')
-});
+})
+     
 
 
 const conexao = mysql.createConnection({

@@ -1,6 +1,6 @@
 function alterartema(){
     const tema = localStorage.getItem("tema")
-    const body= document.querySelector("body")
+    const body = document.querySelector("body")
     const button = document.querySelector(".tema-button")
     
     if (tema) {
@@ -23,11 +23,11 @@ function alterartema(){
         return
 
     }
-        localStorage.setItem("tema","dark")
-        body.classList.add("dark")
+    localStorage.setItem("tema","dark")
+    body.classList.add("dark")
 }
 
-function verifiicarTema(){
+function verificarTema(){
     const tema = localStorage.getItem("tema")
     const body= document.querySelector("body")
     const button = document.querySelector(".tema-button")
@@ -40,7 +40,7 @@ function verifiicarTema(){
             body.classList.add("light")
             button.innerHTML = `<img src="/img/moon-icon.png" alt="Icone de lua"></img>`
         }
-        }
+    }
 }
-
+verificarTema()
 

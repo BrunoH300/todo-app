@@ -24,7 +24,7 @@
     --input-bg: #fff;
 }
 
-body.dark{
+body.dark {
     --bg-header-mobile: url(../img/bg-header-mobile-dark.png);
     --bg-header-desktop: url(../img/bg-header-desktop-dark.png);
     --input-box-shadow:  rgba(0, 0, 0, 0.50);
@@ -244,7 +244,7 @@ main {
         font-size: 0.875rem;
     }
 
-    .informacoes a:hover{
+    .informacoes .botoesa:hover{
         color: var(--info-button-hover);
     }
  
