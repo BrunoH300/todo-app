@@ -12,6 +12,23 @@ app.get('/', (requisicao, resposta) =>{
     resposta.render('home')
 });
 
-app.listen(3000,() => {
-    console.log("servidor na 3000")
+
+const conexao = mysql.createConnection({
+    host: "localhost",
+    user:"root",
+    password:"root",
+    database:"todoapp",
+    port: 3307
+})
+
+conexao.connect((erro) => {
+    if (erro){
+        return console.log(erro)
+    } 
+    
+    console.log("conectado/mysql")
+
+    app.listen(3000, ()=>{
+        console.log("rodando na 3000")
+    })
 })
