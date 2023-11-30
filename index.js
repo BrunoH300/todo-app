@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const exphbs = require("express-handlebars")
+const mysql = require("mysql2")
 
 app.engine('handlebars', exphbs.engine())
 app.set('view engine', 'handlebars')
