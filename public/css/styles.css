@@ -196,6 +196,12 @@ main {
         margin-bottom: 3rem;
     }
 
+    header button{
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+    
 
     header form input{
         padding: 1.25rem 1.5rem;

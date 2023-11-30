@@ -9,12 +9,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
     <title>ToDo App</title>
 </head>
-<body class="dark">
+<body>
     <header>
          <div>
                <div>
                 <h1>To Do</h1>
-                 <img src="/img/moon-icon.png" alt="Icone de Lua">
+                 <button class="tema-button" onclick="alterartema()"> 
+                    <img src="/img/moon-icon.png" alt="Icone de Lua">
+                 </button>
             </div>
              <form action="">
                 <input type="text" id="nova-tarefa" placeholder="Criar uma nova tarefa" name="novatarefa">
@@ -23,5 +25,7 @@
          </div>
     </header>
     {{{body}}}
+
+    <script src="/Js/script.js"></script>
 </body>
 </html>
